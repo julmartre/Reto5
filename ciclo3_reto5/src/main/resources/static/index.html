@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MisionTIC CICLO 3</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Reto 4 OAuth2</title>
+    <meta name="viewport" content="width=device-width"/>
+    <base href="/"/>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <h1>#MisionTIC 2022</h1>
+<div class="container unauthenticated">
+    Para Iniciar Sesion con GitHub:
+    <a href="/oauth2/authorization/github">haz click aqui</a>
+</div>
+
+<div class="container authenticated" style="display:none">
+    Autenticado como: <span id="user"></span>
+</div>
+
+</body>
+
+<script type="text/javascript">
+    $.get("/user", function (data) {
+        $("#user").html(data.name);
+        $(".unauthenticated").hide()
+        $(".authenticated").show()
+    });
+</script>
+
+</html>
