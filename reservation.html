@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RESERVATION</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>RESERVATION</h1>
+    <nav>
+        <a href="index.html">Room</a>
+        <a href="category.html">Category</a>
+        <a href="client.html">Client</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="message.html">Message</a>
+        <a href="reportes.html">Reportes</a>
+        <div class="animation start-portefolio"></div>
+    </nav>
+
+    <h2 style="text-align: center; color: aliceblue;">INGRESO DATOS RESERVATION</h2>
+    <hr>
+    <table class="default" style="margin: 0 auto; color: aliceblue;">
+        <tr>
+            <th>ID</th>
+            <td><input type="number" id="idReservation"></td>
+        </tr>
+        <tr>
+            <th>START DATE</th>
+            <td><input type="datetime-local" id="startDateReservation"></td>
+        </tr>
+        <tr>
+            <th>DEVOLUITON DATE</th>
+            <td><input type="datetime-local" id="devolutionDateReservation"></td>
+        </tr>
+        <tr>
+            <th style="text-align: center;"><input type="button" value="ENVIAR" onclick="guardarReservation()"></th>
+            <td style="text-align: center;"><input type="button" value="ACTUALIZAR" onclick="editarReservation()"></td>
+        </tr>
+    </table>
+    <hr>
+
+    <div id="resultadoReservation" style="text-align: center;"></div>
+
+    <div style="text-align: center;"><button onclick="consultarReservation()">MOSTRAR LISTADO</button></div>
+    <br>
+    <div>
+        <table class="default" style="margin: 0 auto; color: aliceblue;">
+            <tbody id="miResultadoReservation">
+
+            </tbody>
+        </table>
+    </div>
+    <hr>
+
+</body>
+
+</html>

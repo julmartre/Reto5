@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CLIENT</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>CLIENT</h1>
+    <nav>
+        <a href="index.html">Room</a>
+        <a href="category.html">Category</a>
+        <a href="client.html">Client</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="message.html">Message</a>
+        <a href="reportes.html">Reportes</a>
+        <div class="animation start-blog"></div>
+    </nav>
+
+        <h2 style="text-align: center; color: aliceblue;">INGRESO DATOS CLIENT</h2>
+        <hr>
+        <table class="default" style="margin: 0 auto; color: aliceblue;">
+            <tr>
+                <th>ID</th>
+                <td><input type="number" id="idClient"></td>
+            </tr>
+            <tr>
+                <th>EMAIL</th>
+                <td><input type="text" id="emailClient"></td>
+            </tr>
+            <tr>
+                <th>PASSWORD</th>
+                <td><input type="password" id="passwordClient"></td>
+            </tr>
+            <tr>
+                <th>NAME</th>
+                <td><input type="text" id="nameClient"></td>
+            </tr>
+            <tr>
+                <th>AGE</th>
+                <td><input type="number" id="ageClient"></td>
+            </tr>
+            <tr>
+                <th style="text-align: center;"><input type="button" value="ENVIAR" onclick="guardarClient()"></th>
+                <td style="text-align: center;"><input type="button" value="ACTUALIZAR" onclick="editarClient()"></td>
+            </tr>
+        </table>
+        <hr>
+
+        <div id="resultadoClient" style="text-align: center;"></div>
+
+        <div style="text-align: center;"><button onclick="consultarClient()">MOSTRAR LISTADO</button></div>
+        <br>
+        <div>
+            <table class="default" style="margin: 0 auto; color: aliceblue;">
+                <tbody id="miResultadoClient">
+
+                </tbody>
+            </table>
+        </div>
+        <hr>
+
+</body>
+
+</html>

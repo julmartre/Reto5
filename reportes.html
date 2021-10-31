@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>REPORTES</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>REPORTES</h1>
+    <nav>
+        <a href="index.html">Room</a>
+        <a href="category.html">Category</a>
+        <a href="client.html">Client</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="message.html">Message</a>
+        <a href="reportes.html">Reportes</a>
+        <div class="animation start-reportes"></div>
+    </nav>
+
+    <h1 style="text-align: center; color: aliceblue;">SELECCIONE REPORTE DESEADO</h1>
+    <hr>
+    <h2 style="text-align: center; color: aliceblue;">RESERVAS COMPLETADAS Y CANCELADAS</h2>
+
+    <div style="text-align: center;"><button onclick="consultarCompletados()">MOSTRAR LISTADO</button></div>
+    <br>
+    <div id="resultadoReportes" style="text-align: center;"></div>
+
+    <hr>
+
+    <h2 style="text-align: center; color: aliceblue;">TOP CLIENTES QUE MAS DINERO DEJARON A LA EMPRESA</h2>
+    <div style="text-align: center;"><button onclick="consultarClientes()">MOSTRAR CLIENTE</button></div>
+    <br>
+    <div>
+        <table class="default" style="margin: 0 auto; color: aliceblue;">
+            <tbody id="miResultadoReportes">
+
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <h2 style="text-align: center; color: aliceblue;">RESERVAS EN TIEMPO DETERMINADO</h2>
+    <h3 style="text-align: center; color: aliceblue;">INGRESE LAS FECHAS</h3>
+    <table class="default" style="margin: 0 auto; color: aliceblue;">
+        <tr>
+            <th>FECHA 1 </th>
+            <td><input type="date" id="fechaReporte"></td>
+        </tr>
+        <tr>
+            <th>FECHA 2 </th>
+            <td><input type="date" id="fecha2Reporte"></td>
+        </tr>
+        <tr>
+            <th>VERIFICAR</th>
+            <td style="text-align: center;"><input type="button" value="ENVIAR" onclick="guardarReporte()"></td>
+        </tr>
+    </table>
+    <br>
+
+    <div id="miResultadoReportes2" style="text-align: center;"></div>
+
+    <hr>
+</body>
+
+</html>

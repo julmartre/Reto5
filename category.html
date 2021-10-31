@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CATEGORY</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>CATEGORY</h1>
+    <nav>
+        <a href="index.html">Room</a>
+        <a href="category.html">Category</a>
+        <a href="client.html">Client</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="message.html">Message</a>
+        <a href="reportes.html">Reportes</a>
+        <div class="animation start-about"></div>
+    </nav>
+
+    <h2 style="text-align: center; color: aliceblue;">INGRESO DATOS CATEOGORY</h2>
+    <hr>
+    <table class="default" style="margin: 0 auto; color: aliceblue;">
+        <tr>
+            <th>ID</th>
+            <td><input type="text" id="idCategory"></td>
+        </tr>
+        <tr>
+            <th>NAME</th>
+            <td><input type="text" id="nameCategory"></td>
+        </tr>
+        <tr>
+            <th>DESCRIPTION</th>
+            <td><input type="text" id="descriptionCategory"></td>
+        </tr>
+        <tr>
+            <th style="text-align: center;"><input type="button" value="ENVIAR" onclick="guardarCategory()"></th>
+            <td style="text-align: center;"><input type="button" value="ACTUALIZAR" onclick="editarCategory()"></td>
+        </tr>
+    </table>
+    <hr>
+
+    <div id="resultadoCategory" style="text-align: center;"></div>
+
+    <div style="text-align: center;"><button onclick="consultarCategory()">MOSTRAR LISTADO</button></div>
+    <br>
+    <div>
+        <table class="default" style="margin: 0 auto; color: aliceblue;">
+            <tbody id="miResultadoCategory">
+
+            </tbody>
+        </table>
+    </div>
+    <hr>
+
+</body>
+
+</html>

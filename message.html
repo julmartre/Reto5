@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MESSAGE</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>MESSAGE</h1>
+    <nav>
+        <a href="index.html">Room</a>
+        <a href="category.html">Category</a>
+        <a href="client.html">Client</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="message.html">Message</a>
+        <a href="reportes.html">Reportes</a>
+        <div class="animation start-contact"></div>
+    </nav>
+
+    <h2 style="text-align: center; color: aliceblue;">INGRESO DATOS MESSAGE</h2>
+    <hr>
+    <table class="default" style="margin: 0 auto; color: aliceblue;">
+        <tr>
+            <th>ID</th>
+            <td><input type="number" id="idMessage"></td>
+        </tr>
+        <tr>
+            <th>MESSAGETEXT</th>
+            <td><input type="text" id="message"></td>
+        </tr>
+        <tr>
+            <th style="text-align: center;"><input type="button" value="ENVIAR" onclick="guardarMessage()"></th>
+            <td style="text-align: center;"><input type="button" value="ACTUALIZAR" onclick="editarMessage()"></td>
+        </tr>
+    </table>
+    <hr>
+
+    <div id="resultadoMessage" style="text-align: center;"></div>
+
+    <div style="text-align: center;"><button onclick="consultarMessage()">MOSTRAR LISTADO</button></div>
+    <br>
+    <div>
+        <table class="default" style="margin: 0 auto; color: aliceblue;">
+            <tbody id="miResultadoMessage">
+
+            </tbody>
+        </table>
+    </div>
+    <hr>
+
+</body>
+
+</html>
